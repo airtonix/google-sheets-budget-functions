@@ -4,6 +4,7 @@ dependencies:
   '@types/jest': 26.0.23
   '@typescript-eslint/eslint-plugin': 4.28.0_4ec1e0eca7c6e4115e1e7a13008fdec2
   '@typescript-eslint/parser': 4.28.0_eslint@7.29.0+typescript@4.3.4
+  date-fns: 2.22.1
   eslint: 7.29.0
   eslint-config-prettier: 6.15.0_eslint@7.29.0
   eslint-config-react-app: 6.0.0_4caa3402d3bc5120bd00d10f012e9259
@@ -1560,6 +1561,12 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==
+  /date-fns/2.22.1:
+    dev: false
+    engines:
+      node: '>=0.11'
+    resolution:
+      integrity: sha512-yUFPQjrxEmIsMqlHhAhmxkuH769baF21Kk+nZwZGyrMoyLA+LugaQtC0+Tqf9CBUUULWwUJt6Q5ySI3LJDDCGg==
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -5341,6 +5348,7 @@ specifiers:
   '@types/jest': ^26.0.23
   '@typescript-eslint/eslint-plugin': ^4.9.0
   '@typescript-eslint/parser': ^4.9.0
+  date-fns: ^2.22.1
   eslint: ^7.14.0
   eslint-config-prettier: ^6.15.0
   eslint-config-react-app: ^6.0.0
