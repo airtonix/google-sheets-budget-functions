@@ -1,0 +1,5 @@
+module.exports = {
+  preset: 'ts-jest',
+  moduleFileExtensions: ['js', 'ts', 'tsx'],
+  verbose: true,
+};
