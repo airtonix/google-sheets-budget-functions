@@ -51,11 +51,11 @@ importers:
   packages/clasp-token-action:
     specifiers:
       '@actions/core': ^1.2.3
-      '@zeit/ncc': ^0.22.1
+      '@vercel/ncc': ^0.29.0
     dependencies:
       '@actions/core': 1.4.0
     devDependencies:
-      '@zeit/ncc': 0.22.3
+      '@vercel/ncc': 0.29.0
 
   packages/scheduled-transactions:
     specifiers:
@@ -964,9 +964,8 @@ packages:
       eslint-visitor-keys: 2.1.0
     dev: false
 
-  /@zeit/ncc/0.22.3:
-    resolution: {integrity: sha512-jnCLpLXWuw/PAiJiVbLjA8WBC0IJQbFeUwF4I9M+23MvIxTxk5pD4Q8byQBSPmHQjz5aBoA7AKAElQxMpjrCLQ==}
-    deprecated: '@zeit/ncc is no longer maintained. Please use @vercel/ncc instead.'
+  /@vercel/ncc/0.29.0:
+    resolution: {integrity: sha512-p+sB835wOSDdgm2mgFgSOcXJF84AqZ+vBEnnGS0sm8veA92Hia7sqH0qEnqeFilPl+cXtxbdh2er+WdlfbVCZA==}
     hasBin: true
     dev: true
 
