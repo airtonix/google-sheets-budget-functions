@@ -27,7 +27,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
       - run: pnpm install
-      - uses: .github/actions/clasp
+      - uses: packages/actions/clasp-token-action
         with:
-          scriptId: 1bnrYrRq84fSNKay-iTcTKGuCe63_N0ZLuDyB0f1Iz3SpVmM9RrZQvMvT
-          accessToken: ${{ secrets.GIT_HUB_TOKEN }}
+          client-id: ${{ secrets.CLASP_CLIENT_ID }}
+          client-secret: ${{ secrets.CLASP_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.CLASP_REFRESH_TOKEN }}

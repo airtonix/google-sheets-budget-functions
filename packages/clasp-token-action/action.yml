@@ -1,5 +1,7 @@
 name: "Clasp Token"
+
 description: "This action sets up .clasprc.json file to publish to google app script"
+
 inputs:
   client-id:
     description: "ClientID of the project"
@@ -10,9 +12,11 @@ inputs:
   refresh-token:
     description: "Refresh token to get new access token"
     required: true
+
 runs:
   using: "node12"
-  main: "dist/index.js"
+  main: "action.js"
+
 branding:
   icon: "file-plus"
   color: "blue"
