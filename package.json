@@ -7,6 +7,7 @@
     "clasp": "clasp",
     "release": "clasp push",
     "test": "jest",
+    "test:ci": "jest --ci --reporters=default --reporters=jest-Junit",
     "lint": "eslint . --ext ts,tsx,js"
   },
   "author": "",
@@ -28,6 +29,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^6.0.0",
     "jest": "^27.0.5",
+    "jest-junit": "^12.2.0",
     "lint-staged": "^11.0.0",
     "prettier": "^2.0.5",
     "ts-jest": "^27.0.1",
