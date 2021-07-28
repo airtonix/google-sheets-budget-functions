@@ -1,5 +1,5 @@
-const { writeFile } = require("fs");
-const { homeDir } = require("os");
+const writeFile = require("fs").writeFile;
+const homeDir = require("os").homeDir;
 
 const core = require("@actions/core");
 
