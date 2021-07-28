@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
       - run: pnpm install
-      - run: pnpm test
+      - run: pnpm test:ci
       - run: pnpm lint
       - uses: ./packages/clasp-token-action
         with:
