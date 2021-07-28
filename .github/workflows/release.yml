@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
       - run: pnpm install
-      - uses: ./packages/actions/clasp-token-action
+      - uses: ./packages/clasp-token-action
         with:
           client-id: ${{ secrets.CLASP_CLIENT_ID }}
           client-secret: ${{ secrets.CLASP_CLIENT_SECRET }}
