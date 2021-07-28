@@ -1,0 +1,33 @@
+name: Release Package
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: asdf_install
+        uses: asdf-vm/actions/install@v1
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-pnpm-modules
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
+      - run: pnpm install
+      - uses: .github/actions/clasp
+        with:
+          scriptId: 1bnrYrRq84fSNKay-iTcTKGuCe63_N0ZLuDyB0f1Iz3SpVmM9RrZQvMvT
+          accessToken: ${{ secrets.GIT_HUB_TOKEN }}
