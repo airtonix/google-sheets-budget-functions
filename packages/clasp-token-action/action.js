@@ -1,5 +1,5 @@
 const writeFile = require("fs").writeFile;
-const homeDir = require("os").homeDir;
+const homedir = require("os").homedir;
 
 const core = require("@actions/core");
 
@@ -10,7 +10,7 @@ async function run() {
   const claspJSON = getClaspJSON(clientID, clientSecret, refreshToken);
   try {
     writeFile(
-      require("path").join(homeDir(), ".clasprc.json"),
+      require("path").join(homedir(), ".clasprc.json"),
       JSON.stringify(claspJSON),
       (error) => {
         if (error) core.setFailed(error.message);
