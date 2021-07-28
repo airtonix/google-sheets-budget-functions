@@ -19,9 +19,6 @@ jobs:
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-${{ matrix.node-version }}-
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 5.18.9
       - run: pnpm install
       - run: pnpm typecheck
       - run: pnpm lint
