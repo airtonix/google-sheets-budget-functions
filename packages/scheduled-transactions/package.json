@@ -1,0 +1,8 @@
+{
+    "name": "@budget-functions/scheduled-transactions",
+    "version": "0.0.1",
+    "main": "./src/index.ts",
+    "dependencies": {
+        "date-fns": "^2.22.1"
+    }
+}

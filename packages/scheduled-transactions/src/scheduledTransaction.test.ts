@@ -14,11 +14,11 @@ import {
   GetTaggedSchedulesOnDate,
   Schedule,
   SumTaggedSchedulesOnDate,
-} from "./scheduledTransactions";
+} from ".";
 
 const today = new Date();
 
-jest.mock("./scheduledTransactions/GetSchedules", () => {
+jest.mock("./GetSchedules", () => {
   return {
     GetSchedules: async (): Promise<Schedule[]> => [
       [

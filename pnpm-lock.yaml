@@ -1,52 +1,61 @@
 lockfileVersion: 5.3
 
-specifiers:
-  '@google/clasp': ^2.3.2
-  '@types/google-apps-script': ^1.0.36
-  '@types/jest': ^26.0.23
-  '@typescript-eslint/eslint-plugin': ^4.9.0
-  '@typescript-eslint/parser': ^4.9.0
-  date-fns: ^2.22.1
-  eslint: ^7.14.0
-  eslint-config-prettier: ^6.15.0
-  eslint-config-react-app: ^6.0.0
-  eslint-plugin-flowtype: ^5.2.0
-  eslint-plugin-import: ^2.22.1
-  eslint-plugin-jsx-a11y: ^6.4.1
-  eslint-plugin-prettier: ^3.1.4
-  eslint-plugin-react: ^7.21.5
-  eslint-plugin-react-hooks: ^4.2.0
-  husky: ^6.0.0
-  jest: ^27.0.5
-  lint-staged: ^11.0.0
-  prettier: ^2.0.5
-  ts-jest: ^27.0.1
-  ts-paths-resolve-plugin: ^5.2.3
-  typescript: ^4.1.2
+importers:
 
-dependencies:
-  '@google/clasp': 2.3.2
-  '@types/google-apps-script': 1.0.36
-  '@types/jest': 26.0.23
-  '@typescript-eslint/eslint-plugin': 4.28.0_4ec1e0eca7c6e4115e1e7a13008fdec2
-  '@typescript-eslint/parser': 4.28.0_eslint@7.29.0+typescript@4.3.4
-  date-fns: 2.22.1
-  eslint: 7.29.0
-  eslint-config-prettier: 6.15.0_eslint@7.29.0
-  eslint-config-react-app: 6.0.0_4caa3402d3bc5120bd00d10f012e9259
-  eslint-plugin-flowtype: 5.7.2_eslint@7.29.0
-  eslint-plugin-import: 2.23.4_eslint@7.29.0
-  eslint-plugin-jsx-a11y: 6.4.1_eslint@7.29.0
-  eslint-plugin-prettier: 3.4.0_a97f137acbd150284a749134862326bb
-  eslint-plugin-react: 7.24.0_eslint@7.29.0
-  eslint-plugin-react-hooks: 4.2.0_eslint@7.29.0
-  husky: 6.0.0
-  jest: 27.0.5
-  lint-staged: 11.0.0
-  prettier: 2.3.1
-  ts-jest: 27.0.3_jest@27.0.5+typescript@4.3.4
-  ts-paths-resolve-plugin: 5.2.3_typescript@4.3.4
-  typescript: 4.3.4
+  .:
+    specifiers:
+      '@google/clasp': ^2.3.2
+      '@types/google-apps-script': ^1.0.36
+      '@types/jest': ^26.0.23
+      '@typescript-eslint/eslint-plugin': ^4.9.0
+      '@typescript-eslint/parser': ^4.9.0
+      eslint: ^7.14.0
+      eslint-config-prettier: ^6.15.0
+      eslint-config-react-app: ^6.0.0
+      eslint-plugin-flowtype: ^5.2.0
+      eslint-plugin-import: ^2.22.1
+      eslint-plugin-jsx-a11y: ^6.4.1
+      eslint-plugin-prettier: ^3.1.4
+      eslint-plugin-react: ^7.21.5
+      eslint-plugin-react-hooks: ^4.2.0
+      husky: ^6.0.0
+      jest: ^27.0.5
+      lint-staged: ^11.0.0
+      prettier: ^2.0.5
+      ts-jest: ^27.0.1
+      ts-paths-resolve-plugin: ^5.2.3
+      typescript: ^4.1.2
+    dependencies:
+      '@google/clasp': 2.3.2
+      '@types/google-apps-script': 1.0.36
+      '@types/jest': 26.0.23
+      '@typescript-eslint/eslint-plugin': 4.28.0_4ec1e0eca7c6e4115e1e7a13008fdec2
+      '@typescript-eslint/parser': 4.28.0_eslint@7.29.0+typescript@4.3.4
+      eslint: 7.29.0
+      eslint-config-prettier: 6.15.0_eslint@7.29.0
+      eslint-config-react-app: 6.0.0_4caa3402d3bc5120bd00d10f012e9259
+      eslint-plugin-flowtype: 5.7.2_eslint@7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsx-a11y: 6.4.1_eslint@7.29.0
+      eslint-plugin-prettier: 3.4.0_a97f137acbd150284a749134862326bb
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-react-hooks: 4.2.0_eslint@7.29.0
+      husky: 6.0.0
+      jest: 27.0.5
+      lint-staged: 11.0.0
+      prettier: 2.3.1
+      ts-jest: 27.0.3_jest@27.0.5+typescript@4.3.4
+      ts-paths-resolve-plugin: 5.2.3_typescript@4.3.4
+      typescript: 4.3.4
+
+  packages/scheduled-transactions:
+    specifiers:
+      date-fns: ^2.22.1
+    dependencies:
+      date-fns: 2.22.1
+
+  packages/tax-rate:
+    specifiers: {}
 
 packages:
 
