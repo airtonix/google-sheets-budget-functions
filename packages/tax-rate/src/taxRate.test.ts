@@ -1,4 +1,4 @@
-import { taxBand, tax, taxAuResident2020, taxAuResident2019 } from "./taxRate";
+import { tax, taxAuResident2020, taxBand } from "./taxRate";
 
 describe("taxBand", () => {
   it("no rate", () => {

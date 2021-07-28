@@ -14,7 +14,7 @@ export function FilterSchedulesOnDate(schedules: Schedule[], date: Date) {
 
     const distance = differenceInCalendarDays(date, cell);
     const variance = Math.ceil(distance % frequency);
-    const isForDate = variance == 0;
+    const isForDate = variance === 0;
     return isForDate;
   });
 }
