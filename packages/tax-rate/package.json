@@ -1,5 +1,10 @@
 {
     "name": "@budget-functions/tax-rate",
     "version": "0.0.1",
-    "main": "./src/index.ts"
+    "scripts": {
+        "build": "rollup --config ./rollup.config.js"
+    },
+    "devDependencies": {
+        "@budget-functions/create-rollup-config": "workspace:0.0.1"
+    }
 }

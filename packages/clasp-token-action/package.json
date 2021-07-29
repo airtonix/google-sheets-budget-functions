@@ -2,14 +2,7 @@
     "name": "@budget-functions/clasp-token-action",
     "version": "0.0.1",
     "description": "This sets token for clasp so we can use it to push files to app script",
-    "main": "index.js",
-    "scripts": {
-        "build": "ncc build index.js"
-    },
     "dependencies": {
         "@actions/core": "^1.2.3"
-    },
-    "devDependencies": {
-        "@vercel/ncc": "^0.29.0"
     }
 }
