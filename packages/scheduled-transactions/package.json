@@ -1,8 +1,13 @@
 {
     "name": "@budget-functions/scheduled-transactions",
     "version": "0.0.1",
-    "main": "./src/index.ts",
+    "scripts": {
+        "build": "rollup --config ./rollup.config.js"
+    },
     "dependencies": {
         "date-fns": "^2.22.1"
+    },
+    "devDependencies": {
+        "@budget-functions/create-rollup-config": "workspace:0.0.1"
     }
 }

@@ -15,7 +15,7 @@ inputs:
 
 runs:
   using: "node12"
-  main: "action.js"
+  main: "src/index.js"
 
 branding:
   icon: "file-plus"

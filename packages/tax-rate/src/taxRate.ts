@@ -1,16 +1,16 @@
-export const taxBand = (rate: number, lower: number, upper?: number) => {
+export function taxBand(rate: number, lower: number, upper?: number) {
   return (amount: number) => {
     if (upper && amount > upper) return (upper - lower) * rate;
     if (amount > lower) return (amount - lower) * rate;
     return 0;
   };
-};
+}
 
-export const tax = (rules: ReturnType<typeof taxBand>[], income: number) => {
+export function tax(rules: ReturnType<typeof taxBand>[], income: number) {
   return rules.reduce((result, rule) => {
     return result + rule(income);
   }, 0);
-};
+}
 
 /**
 Resident tax rates 2020–21
@@ -21,7 +21,7 @@ Resident tax rates 2020–21
 | $120,001 – $180,000 | $29,467 plus 37 cents for each $1 over $120,000 |
 | $180,001 and over   | $51,667 plus 45 cents for each $1 over $180,000 |
 */
-export const taxAuResident2020 = (amount: number) => {
+export function taxAuResident2020(amount: number) {
   return tax(
     [
       taxBand(0, 0, 18200),
@@ -32,7 +32,7 @@ export const taxAuResident2020 = (amount: number) => {
     ],
     amount
   );
-};
+}
 
 /**
 Resident tax rates 2019-20
@@ -44,7 +44,7 @@ Resident tax rates 2019-20
 | $120,001 – $180,000 | $29,467 plus 37 cents for each $1 over $120,000 |
 | $180,001 and over   | $51,667 plus 45 cents for each $1 over $180,000 |
 */
-export const taxAuResident2019 = (amount: number) => {
+export function taxAuResident2019(amount: number) {
   return tax(
     [
       taxBand(0, 0, 18200),
@@ -55,4 +55,4 @@ export const taxAuResident2019 = (amount: number) => {
     ],
     amount
   );
-};
+}

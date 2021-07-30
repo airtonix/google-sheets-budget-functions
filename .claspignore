@@ -1,5 +1,4 @@
 **/**
+**/node_modules
 !appsscript.json
-!packages/**/src/**/*.ts
-packages/clasp-action-token/**
-**/*.test.ts
+!packages/*/dist/**

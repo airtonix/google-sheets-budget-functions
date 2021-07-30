@@ -9,16 +9,14 @@ export function FilterActiveSchedules(schedules: Schedule[], date: Date) {
     const endDate = schedule[ENUM_SCHEDULE_CELL_End];
 
     // is still going
-    const startedButNotYetFinished =
+    if (
       !!endDate &&
       !!startDate &&
       startDate.getTime() <= time &&
-      endDate.getTime() > time;
-
-    const startedButDoesntEnd =
-      !endDate && !!startDate && startDate.getTime() < time;
-
-    if (startedButNotYetFinished || startedButDoesntEnd) {
+      endDate.getTime() > time
+    ) {
+      output.push(schedule);
+    } else if (!endDate && !!startDate && startDate.getTime() < time) {
       output.push(schedule);
     }
   }
