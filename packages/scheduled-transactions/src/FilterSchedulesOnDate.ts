@@ -1,4 +1,4 @@
-import { differenceInCalendarDays } from "date-fns";
+import differenceInDays from "date-fns/differenceInDays";
 
 import { Schedule } from "./types";
 import {
@@ -8,11 +8,11 @@ import {
 
 export function FilterSchedulesOnDate(schedules: Schedule[], date: Date) {
   return schedules.filter((schedule) => {
-    const cell = schedule[ENUM_SCHEDULE_CELL_Start];
+    const start = schedule[ENUM_SCHEDULE_CELL_Start];
     const frequency = schedule[ENUM_SCHEDULE_CELL_Frequency];
-    if (!cell || !frequency) return false;
+    if (!start || !frequency) return false;
 
-    const distance = differenceInCalendarDays(date, cell);
+    const distance = differenceInDays(date, start);
     const variance = Math.ceil(distance % frequency);
     const isForDate = variance === 0;
     return isForDate;

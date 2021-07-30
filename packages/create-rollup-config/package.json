@@ -1,0 +1,12 @@
+{
+    "name": "@budget-functions/create-rollup-config",
+    "version": "0.0.1",
+    "main": "./src/index.js",
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.14.5",
+        "@rollup/plugin-commonjs": "^19.0.2",
+        "@rollup/plugin-node-resolve": "^13.0.4",
+        "@rollup/plugin-typescript": "^8.2.4",
+        "lodash": "^4.17.21"
+    }
+}
