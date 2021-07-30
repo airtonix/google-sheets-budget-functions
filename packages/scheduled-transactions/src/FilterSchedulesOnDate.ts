@@ -1,4 +1,3 @@
-import differenceInCalendarDays from "date-fns/differenceInBusinessDays";
 import differenceInDays from "date-fns/differenceInDays";
 
 import { Schedule } from "./types";
