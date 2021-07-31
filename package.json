@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clasp": "clasp",
+    "clean": "del-cli node_modules '**/node_modules/**' '**/dist/**' '**/*.log'",
     "build": "pnpm -r build",
     "deploy": "clasp push",
     "release": "run-s build deploy",
@@ -23,6 +24,7 @@
     "@types/react-dom": "^17.0.9",
     "@typescript-eslint/eslint-plugin": "^4.9.0",
     "@typescript-eslint/parser": "^4.9.0",
+    "del-cli": "^4.0.1",
     "eslint": "^7.14.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-config-react-app": "^6.0.0",
