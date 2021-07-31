@@ -1,9 +1,9 @@
 import { SumScheduledTransactions } from "./SumScheduledTransactions";
 import { GetTaggedSchedulesOnDate } from "./GetTaggedSchedulesOnDate";
-import { A1Notation } from "./types";
+import { Schedule } from "./types";
 
 export async function SumTaggedSchedulesOnDate(
-  range: A1Notation,
+  range: Schedule[],
   date: Date,
   tags: string | string[]
 ): Promise<number> {

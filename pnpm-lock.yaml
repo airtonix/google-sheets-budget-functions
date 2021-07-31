@@ -5,7 +5,7 @@ importers:
   .:
     specifiers:
       '@google/clasp': ^2.3.2
-      '@types/google-apps-script': ^1.0.36
+      '@types/google-apps-script': ^1.0.37
       '@types/jest': ^26.0.23
       '@types/node': ^16.4.8
       '@types/react': ^17.0.15
@@ -35,7 +35,7 @@ importers:
       typescript: ^4.1.2
     dependencies:
       '@google/clasp': 2.3.2
-      '@types/google-apps-script': 1.0.36
+      '@types/google-apps-script': 1.0.37
       '@types/jest': 26.0.23
       '@types/node': 16.4.8
       '@types/react': 17.0.15
@@ -1000,8 +1000,8 @@ packages:
     resolution: {integrity: sha512-C6N5s2ZFtuZRj54k2/zyRhNDjJwwcViAM3Nbm8zjBpbqAdZ00mr0CFxvSKeO8Y/e03WVFLpQMdHYVfUd6SB+Hw==}
     dev: true
 
-  /@types/google-apps-script/1.0.36:
-    resolution: {integrity: sha512-D4NsG136aZfRu2HeS9YtKDyGussDNXVawobjdYNnr69N+xERcqzZNSl+SYv3Mwa6DWy4921UMofXl+SznSmfJw==}
+  /@types/google-apps-script/1.0.37:
+    resolution: {integrity: sha512-iuXrNzkMOjSfo4PBgqFqGYmgYWRzcr1Nq7L3E+nLP8jvyxXpwL5cyNpf4XjuSsFHVt/FmsEmlPeiWdrRPSkfwQ==}
     dev: false
 
   /@types/graceful-fs/4.1.5:

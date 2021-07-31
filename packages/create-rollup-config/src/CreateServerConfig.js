@@ -25,7 +25,7 @@ exports.createServerConfig = function ({
       }),
       nodeResolve(),
       replace({
-        "process.env.NODE_ENV": "production",
+        "process.env.NODE_ENV": "'production'",
       }),
       typescript(),
       commonjs(),

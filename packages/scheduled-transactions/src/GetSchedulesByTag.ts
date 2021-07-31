@@ -1,11 +1,9 @@
-import { A1Notation } from "./types";
-import { GetSchedules } from "./GetSchedules";
+import { Schedule } from "./types";
 import { FilterSchedulesByTag } from "./FilterSchedulesByTag";
 
 export async function GetSchedulesByTag(
-  range: A1Notation,
+  schedules: Schedule[],
   tags: string[] | string
 ) {
-  const schedules = await GetSchedules(range);
   return FilterSchedulesByTag(schedules, tags);
 }

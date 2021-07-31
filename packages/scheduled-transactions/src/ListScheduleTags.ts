@@ -1,13 +1,11 @@
-import { A1Notation } from "./types";
-import { GetSchedules } from "./GetSchedules";
+import { Schedule } from "./types";
 import { GetScheduleTags } from "./GetScheduleTags";
 
-export async function ListScheduleTags(range: A1Notation) {
-  const schedules = await GetSchedules(range);
+export async function ListScheduleTags(schedules: Schedule[]) {
   const output: string[] = [];
   for (const schedule of schedules) {
     for (const tag of GetScheduleTags(schedule)) {
-      if (output.includes(tag)) continue;
+      if (output.indexOf(tag) >= 0) continue;
       output.push(tag);
     }
   }

@@ -1,15 +1,13 @@
 import { FilterSchedulesOnDate } from "./FilterSchedulesOnDate";
 import { FilterActiveSchedules } from "./FilterActiveSchedules";
 import { FilterSchedulesByTag } from "./FilterSchedulesByTag";
-import { A1Notation, Schedule } from "./types";
-import { GetSchedules } from "./GetSchedules";
+import { Schedule } from "./types";
 
 export async function GetTaggedSchedulesOnDate(
-  range: A1Notation,
+  schedules: Schedule[],
   date: Date,
   tags: string | string[]
 ): Promise<Schedule[]> {
-  const schedules = await GetSchedules(range);
   const taggedSchedules = FilterSchedulesByTag(schedules, tags);
   const activeSchedules = FilterActiveSchedules(taggedSchedules, date);
   const schedulesForDate = FilterSchedulesOnDate(activeSchedules, date);

@@ -25,53 +25,42 @@ const ON_FIRST_28_DAY = addDays(ONE_YEAR_AGO, 28);
 const IN_TEN_DAYS = addDays(TODAY, 10);
 const TEN_DAYS_AGO = subDays(TODAY, 10);
 
-jest.mock("./GetSchedules", () => {
-  return {
-    GetSchedules: async (): Promise<Schedule[]> => [
-      [
-        "SalaryMonthlyForeverEndsNextMonth",
-        "Income, Salary",
-        100,
-        ONE_YEAR_AGO,
-        END_OF_NEXT_MONTH,
-        28,
-      ],
-      [
-        "SalaryMonthlyForeverStartsNextMonth",
-        "Income, Salary",
-        100,
-        IN_A_MONTHS_TIME,
-        undefined,
-        28,
-      ],
-      ["DailySavings", "Expenses, Savings", 20, ONE_YEAR_AGO, undefined, 1],
-      [
-        "WeeklyForeverStartsLastWeek",
-        "Expenses, Rent",
-        350,
-        A_WEEK_AGO,
-        undefined,
-        7,
-      ],
-      [
-        "WeeklyForFiveWeeksStartsLastWeek",
-        "Expenses, Fines",
-        250,
-        A_WEEK_AGO,
-        IN_FOUR_WEEKS,
-        7,
-      ],
-      [
-        "MonthlyForeverStartsToday",
-        "Expenses, Internet",
-        75,
-        TODAY,
-        undefined,
-        28,
-      ],
-    ],
-  };
-});
+const MockedSchedules = [
+  [
+    "SalaryMonthlyForeverEndsNextMonth",
+    "Income, Salary",
+    100,
+    ONE_YEAR_AGO,
+    END_OF_NEXT_MONTH,
+    28,
+  ],
+  [
+    "SalaryMonthlyForeverStartsNextMonth",
+    "Income, Salary",
+    100,
+    IN_A_MONTHS_TIME,
+    undefined,
+    28,
+  ],
+  ["DailySavings", "Expenses, Savings", 20, ONE_YEAR_AGO, undefined, 1],
+  [
+    "WeeklyForeverStartsLastWeek",
+    "Expenses, Rent",
+    350,
+    A_WEEK_AGO,
+    undefined,
+    7,
+  ],
+  [
+    "WeeklyForFiveWeeksStartsLastWeek",
+    "Expenses, Fines",
+    250,
+    A_WEEK_AGO,
+    IN_FOUR_WEEKS,
+    7,
+  ],
+  ["MonthlyForeverStartsToday", "Expenses, Internet", 75, TODAY, undefined, 28],
+];
 
 describe("ScheduledTransactions", () => {
   it("FilterSchedulesByTag", () => {
@@ -99,18 +88,22 @@ describe("ScheduledTransactions", () => {
 
   it("GetTaggedSchedulesOnDate should show 2 expenses", async () => {
     expect(
-      await GetTaggedSchedulesOnDate("A1:F10", ON_FIRST_28_DAY, "Expenses")
+      await GetTaggedSchedulesOnDate(
+        MockedSchedules,
+        ON_FIRST_28_DAY,
+        "Expenses"
+      )
     ).toHaveLength(1);
   });
   it("GetTaggedSchedulesOnDate should show 1 Income", async () => {
     expect(
-      await GetTaggedSchedulesOnDate("A1:F10", ON_FIRST_28_DAY, "Income")
+      await GetTaggedSchedulesOnDate(MockedSchedules, ON_FIRST_28_DAY, "Income")
     ).toHaveLength(1);
   });
 
   it("SumTaggedSchedulesOnDate should show 2 Income", async () => {
     expect(
-      await SumTaggedSchedulesOnDate("A1:F10", ON_FIRST_28_DAY, [
+      await SumTaggedSchedulesOnDate(MockedSchedules, ON_FIRST_28_DAY, [
         "Income",
         "Expenses",
       ])
