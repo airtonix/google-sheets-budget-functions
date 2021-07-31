@@ -11,7 +11,8 @@
     "release": "run-s build deploy",
     "typecheck": "tsc --noEmit --skipLibCheck",
     "test": "jest",
-    "lint": "eslint . --ext ts,tsx,js"
+    "lint": "eslint . --ext ts,tsx,js",
+    "package:tagui": "pnpm -r --filter=./packages/tag-multi-select-ui"
   },
   "author": "",
   "license": "ISC",

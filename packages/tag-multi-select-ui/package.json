@@ -3,11 +3,12 @@
     "version": "0.0.1",
     "main": "./src/index.tsx",
     "dependencies": {
-        "gas-client": "^1.0.0",
         "react": "17.0.2",
-        "react-dom": "17.0.2"
+        "react-dom": "17.0.2",
+        "@budget-functions/create-rollup-config": "0.0.1"
     },
-    "devDependencies": {
-        "@budget-functions/create-rollup-config": "workspace:0.0.1"
+    "scripts": {
+        "rollup": "rollup --config ./rollup.config.js",
+        "dev": "LOCAL_DEV=on pnpm run rollup"
     }
 }

@@ -5,6 +5,7 @@ const merge = require("lodash/merge");
 const snakeCase = require("lodash/snakeCase");
 const clean = require("rollup-plugin-clear");
 const replace = require("rollup-plugin-replace");
+const summary = require("rollup-plugin-summary");
 
 const { RemoveExports } = require("./plugins/RemoveExportsPlugins");
 
@@ -30,6 +31,7 @@ exports.createServerConfig = function ({
       typescript(),
       commonjs(),
       RemoveExports(),
+      summary(),
     ],
   });
 };

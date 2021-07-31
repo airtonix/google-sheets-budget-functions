@@ -1,6 +1,9 @@
 {
     "name": "@budget-functions/tag-multiselect",
     "version": "0.0.1",
+    "scripts": {
+        "build": "rollup --config ./rollup.config.js"
+    },
     "devDependencies": {
         "@budget-functions/create-rollup-config": "workspace:0.0.1"
     }
