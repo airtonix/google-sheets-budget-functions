@@ -4,9 +4,15 @@
     "main": "./src/index.js",
     "devDependencies": {
         "@babel/preset-typescript": "^7.14.5",
-        "@rollup/plugin-commonjs": "^19.0.2",
+        "@rollup/plugin-commonjs": "20.0.0",
         "@rollup/plugin-node-resolve": "^13.0.4",
         "@rollup/plugin-typescript": "^8.2.4",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "rollup-plugin-re": "^1.0.7"
+    },
+    "dependencies": {
+        "@rollup/plugin-html": "^0.2.3",
+        "rollup-plugin-generate-html-template": "^1.7.0",
+        "rollup-plugin-jsx": "^1.0.3"
     }
 }
